@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/newcoffee/static/css/main.8321310e.css",
+    "main.js": "/newcoffee/static/js/main.30ad4fb8.js",
+    "static/media/bg1.jpg": "/newcoffee/static/media/bg1.ed495866c7f28244ae05.jpg",
+    "static/media/cart-empty.jpg": "/newcoffee/static/media/cart-empty.19daf4e79604b06d9ebe.jpg",
+    "index.html": "/newcoffee/index.html",
+    "main.8321310e.css.map": "/newcoffee/static/css/main.8321310e.css.map",
+    "main.30ad4fb8.js.map": "/newcoffee/static/js/main.30ad4fb8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8321310e.css",
+    "static/js/main.30ad4fb8.js"
+  ]
+}
