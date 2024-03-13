@@ -6,12 +6,12 @@
 }
 
 .Plusminus-button {
-    /* background-color: silver; */
+    background-color: purple;
     padding:0px;
     width:50px;
     margin-top: 0px;
     text-align: center;
-    color:white
+    color: orange
 }
 
 .Txtbox{
