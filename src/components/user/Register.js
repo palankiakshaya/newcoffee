@@ -5,7 +5,7 @@ import { UserContext } from "../../App";
 export default function Register() {
   const { flag, setFlag, user, setUser, users, setUsers } =
     useContext(UserContext);
-  // const [user, setUser] = useState({ name: "", email: "", pass: "" });
+  // const [user, setUser] = useState({ name: "", email: "", pass: "" }); 
   const newUser = () => {
     setUsers((prev) => [...prev, user]);
     setFlag(() => 2);
