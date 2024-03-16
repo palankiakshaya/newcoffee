@@ -4,7 +4,7 @@
         "name": "Java Chip Frappuccino",
         "desc":"We blend mocha sauce and Frappuccino chips with Frappuccino.",
         "price": "123",
-        "image": "/newcoffee/images/1.png"
+        "image": "/newcoffee/images/1.PNG"
     },
     {
         "id": "2",
@@ -18,41 +18,41 @@
         "name": "Pesto & Mozzarella Sandwich",
         "desc":"Panini bread with basil pesto sauce, tomatoes and mozzarella...",
         "price": "142",
-        "image": "/newcoffee/images/3.png"
+        "image": "/newcoffee/images/3.PNG"
     },
     {
         "id": "4",
         "name": "Fox & Cupcake Mug",
         "desc":"Sip your favorite beverages in style with our Fox & Cupcake ...",
         "price": "195",
-        "image": "/newcoffee/images/4.png"
+        "image": "/newcoffee/images/4.PNG"
     },
     {
         "id": "5",
         "name": "Diwali Blend",
         "desc":"Celebrate this Diwali in the best way we know how – with coffee...",
         "price": "200",
-        "image": "/newcoffee/images/5.png"
+        "image": "/newcoffee/images/5.PNG"
     },
     {
         "id": "6",
         "name": "Almond Chocolates",
         "desc":"Delicious on its own or a perfect pairing with your favorite...",
         "price": "302",
-        "image": "/newcoffee/images/6.png"
+        "image": "/newcoffee/images/6.PNG"
     },
     {
         "id": "7",
         "name": "Caffe Americano",
         "desc":"Rich in flavour, full-bodied espresso with hot water in true...",
         "price": "262",
-        "image": "/newcoffee/images/7.png"
+        "image": "/newcoffee/images/7.PNG"
     },
     {
         "id": "8",
         "name": "Cold coffee",
         "desc":"Our signature rich in flavour espresso blended with delicate...",
         "price": "362",
-        "image": "/newcoffee/images/8.png"
+        "image": "/newcoffee/images/8.PNG"
     }
 ]
