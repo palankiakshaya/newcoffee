@@ -13,7 +13,7 @@ export default function Products() {
               <img
                
                 className="Product-img"
-                src={`${PATH}${value.image}`}
+                src={value.image}
                 alt={value.name}
               />
             </div>
