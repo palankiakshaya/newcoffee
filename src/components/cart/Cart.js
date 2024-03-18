@@ -1,43 +1,46 @@
 import React from "react";
 import cartEmpty from "../../img/cart-empty.jpg";
 import { AppContext } from "../../context/appContext.js";
-import { UserContext } from "../../App.js";
 import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
-// import prodlist from "../product/products.json"
 import "./Cart.css";
-import { Navigate } from "react-router-dom";
 export default function Cart() {
-  const navigate = useNavigate();
-  const { cartItems, setCartItems, products, orders, setOrders } =
+  const { flag, cartItems, setCartItems, products, setOrders, user } =
     useContext(AppContext);
-  const { user } = useContext(UserContext);
   const [order, setOrder] = useState({});
   const [orderValue, setOrderValue] = useState(0);
-
+  const [items, setItems] = useState(0);
+  const navigate = useNavigate()
   useEffect(() => {
     setOrderValue((prev) =>
       products.reduce((total, value) => {
         return total + value.price * (cartItems[value.id] ?? 0);
       }, 0)
     );
+    const values = Object.values(cartItems);
+    let total = values.filter(((elem)=>elem>0))
+    total = total.length;
+    setItems(() => total);
   }, [cartItems]);
 
   const updateCart = (id, qty) => {
-    setCartItems((prev) => ({ ...prev, [id]: qty }));
+      setCartItems((prev) => ({ ...prev, [id]: qty }));
   };
 
   const submitOrder = () => {
-    order.date = Date().slice(0, 15);
-    order.email = user.email;
-    order.details = cartItems;
-    order.total = orderValue;
-    order.status = "pending";
-    setOrder((prev) => ({ ...prev, order }));
-    setOrders((prev) => [...prev, order]);
-    setCartItems(() => []);
-    navigate("/ecomm-react/order");
+    if (flag < 2) {
+      navigate("/ecomm-react/login");
+    } else {
+      order.date = Date().slice(0, 15);
+      order.email = user.email;
+      order.details = cartItems;
+      order.total = orderValue;
+      order.status = "pending";
+      setOrder((prev) => ({ ...prev, order }));
+      setOrders((prev) => [...prev, order]);
+      setCartItems(() => []);
+      navigate("/ecomm-react/order");
+    }
   };
 
   return (
@@ -90,14 +93,16 @@ export default function Cart() {
             </table>
           </div>
           <div className="Cart-div-right">
-            <div className="Cart-order-value">Order Value: ₹{orderValue}</div>
+            <div className="Cart-order-value">
+              Subtotal({items} item{items > 1 && "s"}): ₹{orderValue}
+            </div>
             <div className="Cart-order-value">
               <button onClick={submitOrder} className="Cart-place-order">
-                Proceed to Buy
+                {flag < 2 ? "Login to order" : "Submit Order"}
               </button>
             </div>
           </div>
-          {orders.length}
+      
         </>
       ) : (
         <div>

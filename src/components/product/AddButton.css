@@ -1,17 +1,17 @@
 .AddButton-button {
-    background-color: green;
+    /* background-color: silver; */
     padding:0px;
     width:130px;
     margin-top: 0px;
 }
 
 .Plusminus-button {
-    background-color: purple;
+    /* background-color: silver; */
     padding:0px;
     width:50px;
     margin-top: 0px;
     text-align: center;
-    color: orange
+    color:white
 }
 
 .Txtbox{
